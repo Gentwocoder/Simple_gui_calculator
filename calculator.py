@@ -15,7 +15,7 @@ expression = ""
 
 def press(num):
     global expression
-    expression = expression + str(num)
+    expression += str(num)
     e1.set(expression)
 
 def equalpress():
