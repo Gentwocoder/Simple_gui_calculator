@@ -18,6 +18,7 @@ def press(num):
     expression += str(num)
     e1.set(expression)
 
+# function for the equals button
 def equalpress():
     try:
  
@@ -30,17 +31,21 @@ def equalpress():
         e1.set(" error ")
         expression = ""
 
+# function to clear input
 def clear():
     global expression
     expression = ""
     e1.set("")
 
-def reset_all():
-    entry.delete(0, 'end')
+# def reset_all():
+#     entry.delete(0, 'end')
 
 e1 = StringVar()
+
+# This is for the input
 entry = Entry(font=11, width=25, justify="center", textvariable=e1)
 
+# Empty labels to give space between the input and the buttons
 empty_label = Label(background="black")
 empty_label1 = Label(background="black")
 empty_label2 = Label(background="black")
@@ -48,6 +53,7 @@ empty_label3 = Label(background="black")
 empty_label4 = Label(background="black")
 empty_label5 = Label(background="black")
 
+# Create the buttons
 btn1 = Button(text="1", font=6, bg="red", command=lambda:press(1))
 btn2 = Button(text="2", font=6, bg="red", command=lambda:press(2))
 btn3 = Button(text="3", font=6, bg="red", command=lambda:press(3))
