@@ -7,6 +7,7 @@ window = tk.Tk()
 
 # window.geometry("500x650")
 window.config(bg="black")
+# window.tk.call("wm", "iconphoto", window._w, PhotoImage(file=""))
 window.resizable(width=False, height=False)
 window.title("Simple calculator")
 
@@ -16,7 +17,7 @@ expression = ""
 
 def press(num):
     global expression
-    expression += str(num)
+    expression += str(num or entry.get())
     e1.set(expression)
 
 
@@ -25,7 +26,7 @@ def equalpress():
     try:
  
         global expression
-        total = str(eval(expression))
+        total = str(eval(expression or entry.get()))
  
         e1.set(total)
         expression = ""
